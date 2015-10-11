@@ -5,6 +5,3 @@ ENVS=$(sed 's/^.*System-Provided: //' <<< $ENVS)
 # Delete all after "User-Provided"
 ENVS=$(sed s/"{ \"VCAP_APPLICATION\":.*"/""/ <<< $ENVS)
 export VCAP_SERVICES=$ENVS
-
-
-
